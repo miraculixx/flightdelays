@@ -10,14 +10,14 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.15/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.0/topojson.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.8/d3plus.full.min.js"></script>
-<link href="/lib/d3-geomap/css/d3.geomap.css" rel="stylesheet">
-<script src="/lib/d3-geomap/vendor/d3.geomap.dependencies.min.js"></script>
-<script src="/lib/d3-geomap/js/d3.geomap.min.js"></script>
+<link href="lib/d3-geomap/css/d3.geomap.css" rel="stylesheet">
+<script src="lib/d3-geomap/vendor/d3.geomap.dependencies.min.js"></script>
+<script src="lib/d3-geomap/js/d3.geomap.min.js"></script>
 <script data-main='js/main' src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js"></script>
 <meta charset="utf-8">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="/css/styles.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<!-- summary -->
@@ -26,7 +26,7 @@
 		<div class="col-md-10">
 			<div class="col-md-12">
 				<h1>Flight delays</h1>
-				<p data-textmd='/text/intro.md'></p>
+				<p data-textmd='text/intro.md'></p>
 			</div>
 		</div>
 		<div class="col-md-1"></div>
@@ -39,12 +39,12 @@
 				<h4>What's causing delays?</h4>
 				<div id="cause_years"></div>
 				<div id="cause_airlines"></div>
-				<div class="plot" id='cause_year' data-plot='LinePlotView' data-file='/data/delays_cause_year.csv'></div>
+				<div class="plot" id='cause_year' data-plot='LinePlotView' data-file='data/delays_cause_year.csv'></div>
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-12">
 					<h4>&nbsp;</h4>
-					<p data-textmd='/text/delay-cause.md'></p>
+					<p data-textmd='text/delay-cause.md'></p>
 				</div>
 			</div>
 		</div>
@@ -58,13 +58,13 @@
 				<h4>Which carriers cause the most delays?</h4>
 				<div id="hgyears"></div>
 				<div id="hgairlines"></div>
-				<div class="plot" id='histogram' data-plot='BarChartView' data-file='/data/causeby_carrier.csv'
+				<div class="plot" id='histogram' data-plot='BarChartView' data-file='data/causeby_carrier.csv'
 				data-id='carrier' data-x='carrier' data-y='arr_del15'></div>
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-12">
 					<h4>&nbsp;</h4>
-					<p data-textmd='/text/causeby-carrier.md'></p>
+					<p data-textmd='text/causeby-carrier.md'></p>
 				</div>
 			</div>
 		</div>
@@ -78,13 +78,13 @@
 				<h4>Where (regions) do most delays happen?</h4>
 				<div id="hgyears"></div>
 				<div id="hgairlines"></div>
-				<div class="plot" id='regionmap' data-plot='MapViewD3' data-file='/data/airport_causes.csv'
+				<div class="plot" id='regionmap' data-plot='MapViewD3' data-file='data/airport_causes.csv'
 				data-column='arr_del15' data-unitid='fips' data-noparse=1></div>
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-12">
 					<h4>&nbsp;</h4>
-					<p data-textmd='/text/causeby-region.md'></p>
+					<p data-textmd='text/causeby-region.md'></p>
 				</div>
 			</div>
 		</div>

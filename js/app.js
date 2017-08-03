@@ -55,7 +55,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 	  var lineplot = new views.LinePlotView({
 		el : "#cause_plot",
 	  });
-	  $.get('/data/delays_cause_year.csv', function(csvtext) {
+	  $.get('../data/delays_cause_year.csv', function(csvtext) {
 		var data = $.csv.toObjects(csvtext, {
 		  onParseValue : $.csv.hooks.castToScalar,
 		});
@@ -73,7 +73,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 	  var sample = new views.BoxPlotView({
 		el : '#boxplot',
 	  });
-	  $.get('/data/delays_2003.csv', function(csvtext) {
+	  $.get('../data/delays_2003.csv', function(csvtext) {
 		var data = $.csv.toObjects(csvtext, {
 		  onParseValue : $.csv.hooks.castToScalar
 		});
@@ -93,7 +93,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 		alert(action);
 	  });
 	  selector.on('selected', function(value) {
-		$.get('/data/delays_{0}.csv'.format([value]), function(csvtext) {
+		$.get('data/delays_{0}.csv'.format([value]), function(csvtext) {
 		  var data = $.csv.toObjects(csvtext, {
 			onParseValue : $.csv.hooks.castToScalar
 		  });
@@ -106,7 +106,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 	  var map = new views.MapViewD3({
 		el : '#mapview',
 	  });
-	  $.get('/data/airport_flights.csv', function(csvtext) {
+	  $.get('data/airport_flights.csv', function(csvtext) {
 		var data = $.csv.toObjects(csvtext);
 		map.data = data;
 		map.column = '2012';
