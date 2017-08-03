@@ -1,4 +1,4 @@
-define(['backbone', 'jquery', 'text!/js/templates/DropdownSelector.html'], function($B, $, template_html) { //
+define(['backbone', 'jquery', 'text!../templates/DropdownSelector.html'], function($B, $, template_html) { //
     /**
      * A dropdown select box
      */

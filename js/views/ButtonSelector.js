@@ -1,4 +1,4 @@
-define(['backbone', 'jquery', 'text!/js/templates/ButtonSelector.html'],
+define(['backbone', 'jquery', 'text!../templates/ButtonSelector.html'],
 	function($B, $, template_html) { //
 	  var ButtonSelector = $B.View.extend({
 		template : _.template(template_html),
