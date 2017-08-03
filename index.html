@@ -130,7 +130,7 @@
 		  $(function() {
 			var app = new App();
 			// adopted github commenting from https://stackoverflow.com/a/26608674
-			var urlToGetAllOpenBugs = "https://api.github.com/repos/miraculixx/flightdelays/issues?state=open";
+			var urlToGetAllOpenBugs = "https://api.github.com/repos/miraculixx/flightdelays/issues?state=open&labels=bug";
 			$.getJSON(urlToGetAllOpenBugs, function(allIssues) {
 			  $("#comments").append(
 				  "found " + allIssues.length + " comments</br>");

@@ -11,9 +11,20 @@ or d3.js at this point of the process._
 
 # Design
 
+Flight delays are a cause of dissatisfaction for most if not all airline passengers. This story looks
+at the cause of flight delays using data provided by the US Bureau of Transportation Statistics,
+https://www.bts.gov/ throughout the years 2003 - 2017. 
+
 # Feedback
+
+see https://github.com/miraculixx/flightdelays/issues
 
 # Resources
 
+* Data source: Monthly US Flight Cause Delays Bureau of Transportation Statistics, Flight cause delays, 2003 - 2017,
+  https://www.transtats.bts.gov/OT_Delay/ot_delaycause1.asp?type=3&pn=1
+
 ## data files
+
+* 
 
