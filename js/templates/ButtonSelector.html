@@ -1,0 +1,10 @@
+<div>
+	<div class="btn-toolbar demoPadder" role="toolbar" aria-label="Toolbar with button groups">
+	   <div class="btn-group" role="group" aria-label="First group">
+	   <% _.each(buttons, function(b, i) { %>
+			<button type="button" class="btn btn-default select" data-value="<%= b %>"><%= b %></button>
+	   <% }); %>
+	    <button type="button" class="btn btn-default animate"><i class="fa fa-play-circle-o" aria-hidden="true"></i></button>
+		</div>
+	</div>
+</div>

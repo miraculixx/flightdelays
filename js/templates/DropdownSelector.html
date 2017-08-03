@@ -1,0 +1,13 @@
+<div>
+	<!-- Single button -->
+	<div class="btn-group">
+		<button type="button" class="btn btn-default dropdown-toggle btn-title" data-toggle="dropdown">
+			<%= title %><span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+		    <% _.each(actions, function(el) { %>
+			<li><a class="action-select" data-action="<%= el %>"><%= el %></a></li>
+			<% }); %>
+		</ul>
+	</div>
+</div>

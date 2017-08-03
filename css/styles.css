@@ -1,0 +1,11 @@
+.plot, #boxplot, #mapview, #histogram {
+  min-height: 400px;
+}
+
+#mapyears {
+	margin-bottom: 80px;
+}
+
+#bpairlines {
+	margin-top: 10px;
+}
