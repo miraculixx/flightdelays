@@ -37,6 +37,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 		  dataid: el.data('id'), //line, bar
 		  datax: el.data('x'), // line, bar
 		  datay: el.data('y'), // line, bar
+		  ylabel: el.data('ylabel'), // line, bar 
 		  unitid: el.data('unitid'), //map
           column: el.data('column'), //map
 		});

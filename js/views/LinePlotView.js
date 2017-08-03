@@ -4,6 +4,7 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 	  this.vis = null;
 	  this.column = null;
 	  this.data = options.data || this.sampleData();
+	  this.ylabel = options.ylabel;
 	},
 	selector : function() {
 	  return '#{0}'.format([this.el.id]);
@@ -23,7 +24,9 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 	    .color("name")
 	    .id("name")         // key for which our data is unique on
 	    .text("name")       // key to use for display text
-	    .y("value")         // key to use for y-axis
+	    .y({
+			value: "value",
+			label: this.ylabel})         // key to use for y-axis
 	    .x("year")          // key to use for x-axis
 	    .draw()             // finally, draw the visualization!
 	},

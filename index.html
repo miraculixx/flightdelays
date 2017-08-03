@@ -25,7 +25,8 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10">
 			<div class="col-md-12">
-				<h1>Flight delays</h1>
+				<h1>US Flight Delays 2003 - 2017</h1>
+				<p>by Patrick Senti, patrick.senti at gmx.net</p>
 				<p data-textmd='text/intro.md'></p>
 			</div>
 		</div>
@@ -37,15 +38,17 @@
 		<div class="col-md-10">
 			<div class="col-md-6">
 				<h4>What's causing delays?</h4>
-				<div id="cause_years"></div>
-				<div id="cause_airlines"></div>
-				<div class="plot" id='cause_year' data-plot='LinePlotView' data-file='data/delays_cause_year.csv'></div>
-			</div>
-			<div class="col-md-6">
 				<div class="col-md-12">
-					<h4>&nbsp;</h4>
+
 					<p data-textmd='text/delay-cause.md'></p>
 				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>&nbsp;</h4>
+				<div id="cause_years"></div>
+				<div id="cause_airlines"></div>
+				<div class="plot" id='cause_year' data-plot='LinePlotView' data-ylabel='proportion of flights'
+					data-file='data/delays_cause_year.csv'></div>
 			</div>
 		</div>
 		<div class="col-md-1"></div>
@@ -58,8 +61,8 @@
 				<h4>Which carriers cause the most delays?</h4>
 				<div id="hgyears"></div>
 				<div id="hgairlines"></div>
-				<div class="plot" id='histogram' data-plot='BarChartView' data-file='data/causeby_carrier.csv'
-				data-id='carrier' data-x='carrier' data-y='arr_del15'></div>
+				<div class="plot" id='histogram' data-plot='BarChartView' data-file='data/causeby_carrier.csv' data-id='carrier'
+					data-ylabel='proportion of flights' data-x='carrier' data-y='arr_del15'></div>
 			</div>
 			<div class="col-md-6">
 				<div class="col-md-12">
@@ -75,17 +78,32 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-10">
 			<div class="col-md-6">
-				<h4>Where (regions) do most delays happen?</h4>
-				<div id="hgyears"></div>
-				<div id="hgairlines"></div>
-				<div class="plot" id='regionmap' data-plot='MapViewD3' data-file='data/airport_causes.csv'
-				data-column='arr_del15' data-unitid='fips' data-noparse=1></div>
-			</div>
-			<div class="col-md-6">
+				<h4>In which regions do most delays occur?</h4>
 				<div class="col-md-12">
-					<h4>&nbsp;</h4>
+
 					<p data-textmd='text/causeby-region.md'></p>
 				</div>
+			</div>
+			<div class="col-md-6">
+				<h4>&nbsp;</h4>
+				<div id="hgyears"></div>
+				<div id="hgairlines"></div>
+				<div class="plot" id='regionmap' data-plot='MapViewD3' data-file='data/airport_causes.csv' data-column='arr_del15'
+					data-unitid='fips' data-noparse=1></div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<!-- references -->
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+		<h4>References</h4>
+			<div class="col-md-12">
+			<ul>
+			<li>Data source: Monthly US Flight Cause Delays&nbsp;<a href="https://www.transtats.bts.gov/OT_Delay/ot_delaycause1.asp?type=3&pn=1">Bureau of Transportation Statistics, Flight cause delays, 2003 - 2017</a></li>
+			<li>Software libraries: d3, d3plus, jquery, underscore, backbone, marked</li>
+			</ul>
 			</div>
 		</div>
 		<div class="col-md-1"></div>
