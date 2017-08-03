@@ -1,4 +1,7 @@
 define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
+  /**
+   * d3 geomap map view
+   */
     var MapView = $B.View.extend({
         initialize : function(options) {
             this.vis = null;

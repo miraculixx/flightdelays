@@ -1,4 +1,7 @@
 define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
+  /**
+   * d3plus bar chart
+   */
   var BarChartView = $B.View.extend({
 	initialize : function(options) {
 	  this.vis = null;

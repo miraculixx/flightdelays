@@ -1,3 +1,6 @@
+/**
+ * The requirejs configuration
+ */
 requirejs
 	.config({
 	  baseUrl : 'js',

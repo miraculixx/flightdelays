@@ -1,4 +1,5 @@
 define(['backbone', 'dimple'], function($B, dimple) { //
+  // sample view for testing
   var SampleView = $B.View.extend({
 	initialize : function() {
 	},

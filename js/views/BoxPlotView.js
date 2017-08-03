@@ -1,4 +1,7 @@
 define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) { //
+  /**
+   * d3plus box plot
+   */
     var BoxplotView = $B.View.extend({
         initialize : function() {
             this.data = {};

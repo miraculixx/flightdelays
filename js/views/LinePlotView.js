@@ -1,4 +1,7 @@
 define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
+  /**
+   * d3plus line plot
+   */
   var LinePlotView = $B.View.extend({
 	initialize : function(options) {
 	  this.vis = null;

@@ -1,4 +1,7 @@
 define(['backbone', 'jquery', 'text!../templates/ButtonSelector.html'],
+	/**
+	 * provides a multi-valued button widget
+	 */
 	function($B, $, template_html) { //
 	  var ButtonSelector = $B.View.extend({
 		template : _.template(template_html),

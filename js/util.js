@@ -1,7 +1,10 @@
 define([], function() {
+  /**
+   * utility functions
+   */
   var util = {
     /**
-	 * format strings
+	 * format strings using "some string {foo}".format({foo: 'value'});
  	 * @memberOf util
 	 */
 	format : function(string) {
