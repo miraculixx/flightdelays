@@ -5,7 +5,7 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
             this.column = options.column;
             this.unitid = options.unitid || 'fips';
             this.data = options.data;
-            this.geofile = options.geofile || '../../lib/d3-geomap/topojson/countries/USA.json';
+            this.geofile = options.geofile || '//d3-geomap.github.io/d3-geomap/topojson/countries/USA.json';
         },
         selector : function() {
             return '#{0}'.format([this.el.id]);
