@@ -11,6 +11,7 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 	  this.datay = options.datay || 'value';
 	  this.xlabel = options.xlabel;
 	  this.ylabel = options.ylabel;
+	  this.columnLabels = options.labels || {};
 	},
 	selector : function() {
 	  return '#{0}'.format([this.el.id]);
@@ -25,14 +26,20 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 		  .legend(true) // legend
 		  .id(view.dataid) // id variable
 		  .color(view.datax) // color variable
-		  .x({
-			value: view.datax,
-			label: view.xlabel}) // x axis
+		  .format({
+			"text" : function(label, key) {
+			  return (view.columnLabels[label] || label);
+			},
+		  }).x({
+			value : view.datax,
+			label : view.xlabel
+		  }) // x axis
 		  .y({
-			value: view.datay,
-			label: view.ylabel}) // y axis
+			value : view.datay,
+			label : view.ylabel
+		  }) // y axis
 		  .order(view.datay) // sort
-		  .draw(); 
+		  .draw();
 	},
 	sample_data : function() {
 	  var data = [{

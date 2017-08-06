@@ -1,5 +1,5 @@
-define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
-	views, util, marked) {
+define(['backbone', 'jquery', 'views', 'util', 'marked', 'settings'], function($B, $,
+	views, util, marked, settings) {
   /**
    * Main application module. Provides the main logic to run the application.
    */
@@ -80,6 +80,7 @@ define(['backbone', 'jquery', 'views', 'util', 'marked'], function($B, $,
 		  ylabel: el.data('ylabel'), // line, bar 
 		  unitid: el.data('unitid'), //map
           column: el.data('column'), //map
+          labels: settings.columnLabels, 
 		});
 		var datafile = el.data('file');
 		var shouldParse = el.attr('data-noparse') ? false : true;
