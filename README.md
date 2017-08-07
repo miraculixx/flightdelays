@@ -27,9 +27,20 @@ My design choices were as follows:
 
 Details see https://github.com/miraculixx/flightdelays/issues
 
-1. "Arr_Del15” is better to change to “Arrived Delay”(or something else) with a percentage value in the second chart. 
+1. Nice charts, I am able to understand them all, because I was working on the flight delay dataset too.
+   Other viewer may have label problem to understand.
+   "Arr_Del15” is better to change to “Arrived Delay”(or something else) with a percentage value in the second chart. 
    (comment by fxietech)
 
+2. for the first graph, I noticed the coloring for the line graph was hard to distinguish, when referring to the legend. This issue was resolved when the user hovered over the line.
+   (comment by Raul M.)
+   
+3. Coming to the second graph, I noticed the gridline in the background. It didn’t truly distract me from the graph, but it can be a cause of distraction for visualization, per lesson plan.
+   (comment by Raul M.)
+   
+4. I enjoyed reading your project. The format and documented transitions were appealing for an exploratory data analysis project.
+   The third graph looked good! I didn’t feel there were any necessary alterations for it.
+   (comment by Raul M.)
 
 # Resources
 
