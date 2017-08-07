@@ -8,7 +8,7 @@ not the often suspected extreme weather conditions or security checks at airport
 
 # Design
 
-My design choices were as follows:
+My design choices after a few iterations (see below) were as follows:
 
 1. Use a line plot to show change of the causes (in percent) over time. I tried a few other 
    options like box plots and bar charts, however they were hard to read and did really convey
@@ -22,6 +22,27 @@ My design choices were as follows:
    way to depict this information, since the data is aggregated by geographical region. The downside
    is that the map does not allow a quick realization of actual figures, so I added a few interesting
    data points in the explanatory text next to the plot.
+   
+Following feedback received by the kind people in the Udacity formus, I have adjusted the design as follows:
+
+* Variables are now labeled properly, in plain English (instead of their technical names)
+
+* All plots' axis grids are reduced to the minimum, in particular the line plot does not have any
+  grid lines, the bar chart only shows horizontal grid lines. This improves readability and is really
+  pleasing for the eye.
+  
+* The line plots's stroke width was increase to make the colors more easily visible and comparable to the
+  legend.
+ 
+Prior to publishing my visualization, I already tried out several ideas:
+
+* Adding a "year selector" to each graph, so that only particular years would be shown. This proved
+  to be quite complex and destracting, so I removed it again.
+  
+* Using a box plot on percentage of delayed flights, by airport and year. This was an interesting plot
+  during data exploration, but it proved too complex to show in the final report. In particular there are
+  so many outliers that one can hardly see anything on the plot.
+
 
 # Feedback
 
