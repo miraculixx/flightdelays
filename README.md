@@ -88,9 +88,11 @@ the d3 and d3plus logic. This separation of concerns has many advantages, in par
 extend and change. In addition, most of the code is independent of the specific data and could be easily 
 adopted to a different data set and a different data story.
 
-## Versions
+## Evidence of improvements
 
-* Initial version - see initial_version.pdf and corresponding commit https://github.com/miraculixx/flightdelays/tree/initial 
+* Initial version - see initial_version.pdf or commit https://github.com/miraculixx/flightdelays/tree/initial 
+* Published version - see published_version.pdf or commit https://github.com/miraculixx/flightdelays/tree/published
+* Final version - see https://miraculixx.github.io/flightdelays/index.html or https://github.com/miraculixx/flightdelays/tree/master
 
 ## Data files
 
