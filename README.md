@@ -1,10 +1,16 @@
+Effective Data Visualization
+============================
+
+by Patrick Senti, patrick.senti@gmx.net
+
 # Summary
 
 Flight delays are a cause of dissatisfaction for most if not all airline passengers. This story looks
 at the cause of flight delays using data provided by the US Bureau of Transportation Statistics,
 https://www.bts.gov/ throughout the years 2003 - 2017. The story shows that just 3 carriers have caused 
-1/3 of all delays, and that most delays are caused by the airlines and the national aviation system (NAS),
-not the often suspected extreme weather conditions or security checks at airports.
+1/3 of all delays, and that most delays are caused by the airlines and the national aviation system (NAS)
+and operating in highly frequented regions across the US. Surprisingly, the often suspected extreme weather 
+conditions and security checks at airports cause less than 5% of all delays.
 
 # Design
 
@@ -13,7 +19,7 @@ My design choices after a few iterations (see below) were as follows:
 1. Use a line plot to show change of the causes (in percent) over time. I tried a few other 
    options like box plots and bar charts, however they were hard to read and did really convey
    the message (in particular, that some causes have increased or declined where others are
-   stable or even negligible).
+   stable or even negligible). The line plot includes a color key as a legend.
    
 2. Use a bar chart to show cause of delays by carrier, overall. I tried a pie chart but found
    it hard to interpret. The bar chart is clean and conveys the information very well.  
@@ -70,6 +76,22 @@ Details see https://github.com/miraculixx/flightdelays/issues
 * Include Github comments on the page, https://stackoverflow.com/a/26608674
 * Hosting web pages on github, https://help.github.com/articles/user-organization-and-project-pages/
 
+
+# Implementation
+
+## Code
+
+The app is implemented in a modularized approach using requirejs AMD modules. Backbone.js is used to implement
+the plots (as Views). In this model, the index.html provides the page layout, app.js implements application
+logic by instantiating views as specified (declarative), and the views modules implement and encapsulate all
+the d3 and d3plus logic. This separation of concerns has many advantages, in particular the app is easier to
+extend and change. In addition, most of the code is independent of the specific data and could be easily 
+adopted to a different data set and a different data story.
+
+## Versions
+
+* Initial version - see initial_version.pdf and corresponding commit https://github.com/miraculixx/flightdelays/tree/initial 
+
 ## Data files
 
 * File with base data: 
@@ -83,12 +105,3 @@ Details see https://github.com/miraculixx/flightdelays/issues
 	* Cause by carrier: https://github.com/miraculixx/flightdelays/blob/master/data/causeby_carrier.csv
 	* Cause by airport: https://github.com/miraculixx/flightdelays/blob/master/data/airport_causes.csv 
 
-	
-## Implementation
-
-The app is implemented in a modularized approach using requirejs AMD modules. Backbone.js is used to implement
-the plots (as Views). In this model, the index.html provides the page layout, app.js implements application
-logic by instantiating views as specified (declarative), and the views modules implement and encapsulate all
-the d3 and d3plus logic. This separation of concerns has many advantages, in particular the app is easier to
-extend and change. In addition, most of the code is independent of the specific data and could be easily 
-adopted to a different data set and a different data story.
