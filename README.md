@@ -25,7 +25,11 @@ My design choices were as follows:
 
 # Feedback
 
-see https://github.com/miraculixx/flightdelays/issues
+Details see https://github.com/miraculixx/flightdelays/issues
+
+1. "Arr_Del15” is better to change to “Arrived Delay”(or something else) with a percentage value in the second chart. 
+   (comment by fxietech)
+
 
 # Resources
 

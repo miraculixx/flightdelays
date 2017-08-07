@@ -30,9 +30,11 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 			"text" : function(label, key) {
 			  return (view.columnLabels[label] || label);
 			},
-		  }).x({
+		  }) // text format
+		  .x({
 			value : view.datax,
-			label : view.xlabel
+			label : view.xlabel,
+			grid: false,
 		  }) // x axis
 		  .y({
 			value : view.datay,
