@@ -3,6 +3,8 @@ Effective Data Visualization
 
 by Patrick Senti, patrick.senti@gmx.net
 
+View at https://miraculixx.github.io/flightdelays/index.html
+
 # Summary
 
 Flight delays are a cause of dissatisfaction for most if not all airline passengers. This story looks
@@ -75,8 +77,19 @@ Details see https://github.com/miraculixx/flightdelays/issues
   https://www.transtats.bts.gov/OT_Delay/ot_delaycause1.asp?type=3&pn=1
 * Include Github comments on the page, https://stackoverflow.com/a/26608674
 * Hosting web pages on github, https://help.github.com/articles/user-organization-and-project-pages/
+* Github comments web page integration, https://stackoverflow.com/a/26608674
+* 3rd Party Libraries used under respective license: 
 
-
+	* d3 - https://d3js.org/
+	* d3plus - https://d3plus.org/
+	* d3-geomap -https://d3-geomap.github.io/
+	* topojson - https://github.com/topojson/topojson
+	* bootstrap - https://github.com/topojson/topojson
+	* backbonejs - http://backbonejs.org/
+ 	* underscore -  http://underscorejs.org/
+ 	* jquery - https://jquery.com/
+ 	* requirejs - http://requirejs.org/
+	
 # Implementation
 
 ## Code
