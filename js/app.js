@@ -2,6 +2,38 @@ define(['backbone', 'jquery', 'views', 'util', 'marked', 'settings'], function($
 	views, util, marked, settings) {
   /**
    * Main application module. Provides the main logic to run the application.
+   * 
+   * README.md#Implementation provides a short description of how this application is
+   * set up, conceptually. What follows is a more technical introduction:
+   * 
+   * index.html - this loads requirejs as the JS module loader, effectively loading main.js
+   * main.js - this defines modules and their dependencies in requirejs terms
+   * views.js - this defines all views directly accessible through the views object
+   * util.js - this defines a few utility functions
+   * settings.js - this defines global configuration variables
+   * 
+   * This module (app.js) gets loaded by index.html once all other code and CSS has loaded.
+   * The app is itself a backbonejs View that renders itself. In particular it renders
+   * any plots and text blocks that are defined in the DOM (via index.html). See the
+   * render, renderTextBlocks and renderPlots methods for details.
+   * 
+   * By defining the plots in index.html, renderPlots loads additional Views and renders
+   * them within the DOM element that defines them. This way all code is agnostic to
+   * the actual visualization and the layout of the index.html page. Therefore the code
+   * is easier to maintain, extend and reuse, even in a completely different setup (e.g.
+   * other data, other combinations of plots). 
+   * 
+   * Note you should familiarize yourself with the following before attempting
+   * to work with this code:
+   * 
+   * @see http://backbonejs.org/ for how backbonejs apps work in general, namely views and events
+   * @see http://requirejs.org/ to understand how this JS app is modularized (and on AMD modules)
+   * @see http://getbootstrap.com/ for the reference on HTML and CSS used
+   * 
+   * This application and all its parts (except third-party libraries) are licensed under the MIT license.
+   * Third party libraries are licensed under the specific terms of their respective license. 
+   * 
+   * (c) Patrick Senti, patrick.senti at gmx.net
    */
   var App = $B.View.extend({
 	/**

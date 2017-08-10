@@ -1,6 +1,9 @@
 define([], function() {
   /**
    * utility functions
+   * 
+   * Include this module as a depdendency to gain access to common
+   * functions.
    */
   var util = {
     /**
@@ -14,6 +17,8 @@ define([], function() {
 	  });
 	},
   };
+  // attach util.format to the String object. This way every String
+  // automatically has a .format method 
   String.prototype.format = function() {
 	var args = arguments.length == 1 ? arguments[0] : arguments;
 	return util.format(this, args);

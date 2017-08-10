@@ -1,4 +1,11 @@
 define(
+	/**
+	 * This module sets up a central place for access to Views (widgets)
+	 * 
+	 * set a dependency on this module to gain easy access to any view
+	 * defines in the js/views directory. To keep this working for new
+	 * views, be sure to add the new view class here. 
+	 */
 	[//
 	"views/BoxPlotView", //
 	"views/ButtonSelector",//

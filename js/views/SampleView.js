@@ -1,5 +1,15 @@
 define(['backbone', 'dimple'], function($B, dimple) { //
-  // sample view for testing
+  /**
+   * sample view for testing purpose
+   * 
+   * This module implements a sample view. Do not use for real apps.
+   * 
+   * Usage:
+   * 
+   * var sampleview = new SampleView(options); sampleview.render()
+   * 
+   * @see http://backbonejs.org/#View for details on View objects
+   */
   var SampleView = $B.View.extend({
 	initialize : function() {
 	},
@@ -20,4 +30,4 @@ define(['backbone', 'dimple'], function($B, dimple) { //
 	},
   });
   return SampleView;
-}); 
+});
