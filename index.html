@@ -124,11 +124,20 @@
 	</div>
 	<!-- starter script -->
 	<script type="text/javascript">
+	/** 
+	 * initialize the application
+	 *
+	 * see app.js for an introduction on how this work
+	 */
 	require(
 		['app'],
 		function(App) {
 		  $(function() {
 			var app = new App();
+			// add comments made directly on the page and via github
+			//
+			// this retrieves this project's github comments via their API and
+			// adds the comments' texts to the #comments DOM element. 
 			// adopted github commenting from https://stackoverflow.com/a/26608674
 			var urlToGetAllOpenBugs = "https://api.github.com/repos/miraculixx/flightdelays/issues?state=open&labels=bug";
 			$.getJSON(urlToGetAllOpenBugs, function(allIssues) {

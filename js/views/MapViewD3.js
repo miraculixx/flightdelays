@@ -5,8 +5,9 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
    * This module implements the MapView chart. The following options are
    * available:
    * 
-   * .data - the data object to set on the line plot .unitid - the .unitid()
-   * variable name .geofile - the url of the topojson map, defaults to USA.json
+   * .data - the data object to set on the line plot 
+   * .unitid - the .unitid() variable name 
+   * .geofile - the url of the topojson map, defaults to USA.json
    * 
    * Usage:
    * 
@@ -42,9 +43,13 @@ define(['backbone', 'jquery', 'jquerycsv'], function($B, $, csv) {
 	  var view = this;
 	  var selector = this.selector();
 	  $(selector).empty();
-	  var map = d3.geomap.choropleth().geofile(this.geofile).projection(
-		  d3.geo.albersUsa).column(this.column).unitId(this.unitid).scale(600)
-		  .legend(true);
+	  var map = d3.geomap.choropleth() // create map
+	  .geofile(this.geofile) // load geofile
+	  .projection(d3.geo.albersUsa) // set projection style
+	  .column(this.column) // column variable
+	  .unitId(this.unitid) // unitid variable
+	  .scale(600) // scale map
+	  .legend(true); // show a legend
 	  d3.select(selector).datum(view.data).call(map.draw, map);
 	},
   });
